@@ -1,8 +1,8 @@
-# INSTALL STUFF
+# Install Stuff For Deep Learning
 Notes to install stuff need for Deep Learning. Maybe also other stuff as Latex, in case I get bored. 
 
 
-Nvidia Stuff
+Nvidia
 ======
 
 Up to Feb 2018, I update to Cuda 9.0 (9.1 is not still compatible to everything)
