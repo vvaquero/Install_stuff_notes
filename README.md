@@ -42,11 +42,34 @@ Pytorch in a Virtual Environment
 Get the link from the pytorch web (e.g options: linux, pip, python 2.7, cuda 9.0
 ```pip install <link http://pytorch.org/>```  
 ```pip install torchvision```  
-* Configure other frames and add the path to bash
 ```python -m ipykernel install --user --name=numpy```  
+* Add the path to bash
 ```echo "alias pytorch='source ~/virtualenv/pytorch/bin/activate'" >> ~/.bashrc```  
-** to deactivate:
 ```deactivate```  
-** to activate: 
+* Execution  
+**to activate:**   
 ```pytorch```
+**to deactivate:**  
+```deactivate```
 
+
+TensorFlow in a Virtual Environment
+======
+
+* Create install and create the virtual environment
+```sudo apt-get install python-pip python-dev python-virtualenv```  
+```mkdir ~/virtualenv/```  
+* Launch a venv for TensorFlow and source it
+```virtualenv --system-site-packages ~/virtualenv/tensorflow/```  
+```source ~/virtualenv/tensorflow/bin/activate```  
+* Install pytorch stuff in the venv created
+```pip install numpy scipy matplotlib scikit-image scikit-learn ipython protobuf jupyter tqdm ipykernel```  
+```pip install tensorflow-gpu```  
+```python -m ipykernel install --user --name=tensorflow```  
+* Add the path to bash
+```echo "alias tensorflow='source ~/virtualenv/tensorflow/bin/activate'" >> ~/.bashrc```  
+```deactivate```  
+**to activate:**   
+```tensorFlow```
+**to deactivate:**  
+```deactivate```
