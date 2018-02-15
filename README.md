@@ -48,7 +48,7 @@ Get the link from the pytorch web (e.g options: linux, pip, python 2.7, cuda 9.0
 ```deactivate```  
 * Execution  
 **to activate:**   
-```pytorch```
+```pytorch```  
 **to deactivate:**  
 ```deactivate```
 
@@ -70,6 +70,6 @@ TensorFlow in a Virtual Environment
 ```echo "alias tensorflow='source ~/virtualenv/tensorflow/bin/activate'" >> ~/.bashrc```  
 ```deactivate```  
 **to activate:**   
-```tensorFlow```
+```tensorflow```  
 **to deactivate:**  
 ```deactivate```
