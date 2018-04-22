@@ -73,3 +73,12 @@ TensorFlow in a Virtual Environment
 ```tensorflow```  
 **to deactivate:**  
 ```deactivate```
+
+
+
+Get a Python-3 Virtual Environment
+======
+
+```sudo apt-get install python3-pip python3-dev python-virtualenv```  
+
+```virtualenv --system-site-packages -p python3```  
