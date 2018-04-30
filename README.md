@@ -84,6 +84,77 @@ Get a Python-3 Virtual Environment
 ```virtualenv --system-site-packages -p python3```  
 
 
+Install Docker and Nvidia-Docker  
+======
+### Docker CE installation  
+Summarized from *https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-after-using-the-convenience-script*  
+
+* Remove older Docker version  
+```sudo apt-get remove docker docker-engine docker.io```  
+
+* Install dependencies  
+```sudo apt-get update```  
+``` sudo apt-get install apt-transport-https ca-certificates curl software-properties-common```  
+
+* Add Docker’s official GPG key  
+```curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -```  
+
+* Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint.  
+```sudo apt-key fingerprint 0EBFCD88```  
+You should get:
+```
+    pub   4096R/0EBFCD88 2017-02-22
+          Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+    uid                  Docker Release (CE deb) <docker@docker.com>
+    sub   4096R/F273FCD8 2017-02-22
+```  
+
+* Set up the stable repository  
+```
+   sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```  
+
+* Update and Install  
+```sudo apt-get update```  
+```apt-get install docker-ce```  
+
+* Verify
+```sudo docker run hello-world```  
+
+### Nvidia-Docker installation  
+Summarized from *https://github.com/NVIDIA/nvidia-docker#quick-start*  
+
+* Remove previous versions  
+```docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f```  
+```sudo apt-get purge -y nvidia-docker```  
+
+* Add the package repositories  
+```
+  curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
+  sudo apt-key add -
+```  
+```
+  distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+```  
+```
+  curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
+  sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+```  
+```
+  sudo apt-get update
+```  
+
+* Install nvidia-docker2 and reload the Docker daemon configuration  
+```sudo apt-get install -y nvidia-docker2```  
+```sudo pkill -SIGHUP dockerd```  
+
+* Test nvidia-smi with the latest official CUDA image  
+```docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi```  
+
+
 Ubuntu Tweaks
 ======
 ```sudo apt install indicator-multiload```  
