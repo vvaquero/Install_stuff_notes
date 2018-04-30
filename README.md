@@ -1,8 +1,15 @@
 # Install Stuff For Deep Learning
 Notes to install stuff need for Deep Learning. Maybe also other stuff as Latex, in case I get bored. 
 
+# Table of contents
+1. [Nvidia](#Nvidia)
+2. [Pytorch Virtual Environment](#Pytorch_venv)
+3. [TensorFlow Virtual Environment](#TensorFlow_venv)
+4. [Python3 Virtual Environment](#python3_venv)
+5. [Install Docker and Nvidia-Docker](#docker)
+6. [Ubuntu Tweaks](#tweaks)
 
-Nvidia
+Nvidia <a name="Nvidia"></a>
 ======
 
 Up to Feb 2018, I update to Cuda 9.0 (9.1 is not still compatible to everything)
@@ -28,7 +35,7 @@ Copy the files inside the cudnn include folder to the corresponding cuda folder 
 
 
 
-Pytorch in a Virtual Environment
+Pytorch in a Virtual Environment <a name="Pytorch_venv"></a>
 ======
 
 * Create install and create the virtual environment  
@@ -53,7 +60,7 @@ Get the link from the pytorch web (e.g options: linux, pip, python 2.7, cuda 9.0
 ```deactivate```
 
 
-TensorFlow in a Virtual Environment
+TensorFlow in a Virtual Environment <a name="TensorFlow_venv"></a>
 ======
 
 * Create install and create the virtual environment  
@@ -76,7 +83,7 @@ TensorFlow in a Virtual Environment
 
 
 
-Get a Python-3 Virtual Environment
+Get a Python-3 Virtual Environment <a name="python3_venv"></a>
 ======
 
 ```sudo apt-get install python3-pip python3-dev python-virtualenv```  
@@ -84,7 +91,7 @@ Get a Python-3 Virtual Environment
 ```virtualenv --system-site-packages -p python3```  
 
 
-Install Docker and Nvidia-Docker  
+Install Docker and Nvidia-Docker <a name="docker"></a> 
 ======
 ### Docker CE installation  
 Summarized from *https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-after-using-the-convenience-script*  
@@ -155,6 +162,6 @@ Summarized from *https://github.com/NVIDIA/nvidia-docker#quick-start*
 ```docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi```  
 
 
-Ubuntu Tweaks
+Ubuntu Tweaks <a name="tweaks"></a> 
 ======
 ```sudo apt install indicator-multiload```  
