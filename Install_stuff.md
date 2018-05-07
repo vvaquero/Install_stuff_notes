@@ -162,6 +162,12 @@ Summarized from *https://github.com/NVIDIA/nvidia-docker#quick-start*
 ```docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi```  
 
 
-Ubuntu Tweaks <a name="tweaks"></a> 
+Ubuntu 16.04 Tweaks <a name="tweaks"></a> 
 ======
+### Install multiload-indicator  
 ```sudo apt install indicator-multiload```  
+
+### Move windows from sceens
+* Install CompizConfig Settings Manager
+```apt-get install compizconfig-settings-manager compiz-plugins-extra```  
+* Window Management &rarr; Put (click to activate) &rarr; Put to next Output &rarr; Log-out & Log-in
