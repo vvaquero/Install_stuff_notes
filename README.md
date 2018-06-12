@@ -46,6 +46,7 @@ Pytorch in a Virtual Environment <a name="Pytorch_venv"></a>
 ```source ~/virtualenv/pytorch/bin/activate```  
 * Install pytorch stuff in the venv created  
 ```pip install numpy scipy matplotlib scikit-image scikit-learn ipython protobuf jupyter tqdm ipykernel```  
+ (in case you need to update ipython:  "pip install IPython==5.X --user")  
 Get the link from the pytorch web (e.g options: linux, pip, python 2.7, cuda 9.0  
 ```pip install <link http://pytorch.org/>```  
 ```pip install torchvision```  
