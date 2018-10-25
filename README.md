@@ -89,7 +89,7 @@ Get a Python-3 Virtual Environment <a name="python3_venv"></a>
 
 ```sudo apt-get install python3-pip python3-dev python-virtualenv```  
 
-```virtualenv --system-site-packages -p python3```  
+```virtualenv --system-site-packages -p python3 [path/to/my_env]```  
 
 
 Install Docker and Nvidia-Docker <a name="docker"></a> 
