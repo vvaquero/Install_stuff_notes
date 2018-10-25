@@ -3,11 +3,13 @@ Notes to install stuff need for Deep Learning. Maybe also other stuff as Latex, 
 
 # Table of contents
 1. [Nvidia](#Nvidia)
-2. [Pytorch Virtual Environment](#Pytorch_venv)
-3. [TensorFlow Virtual Environment](#TensorFlow_venv)
-4. [Python3 Virtual Environment](#python3_venv)
-5. [Install Docker and Nvidia-Docker](#docker)
-6. [Ubuntu Tweaks](#tweaks)
+2. [![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Conda Python 3.7 - Pytorch (in env)](#Conda_Pytorch_venv)![#f03c15](https://placehold.it/15/f03c15/000000?text=+)
+3. [Pytorch Virtual Environment](#Pytorch_venv)
+4. [TensorFlow Virtual Environment](#TensorFlow_venv)
+5. [Python3 Virtual Environment](#python3_venv)
+6. [Install Docker and Nvidia-Docker](#docker)
+7. [Ubuntu Tweaks](#tweaks)
+
 
 Nvidia <a name="Nvidia"></a>
 ======
@@ -32,6 +34,31 @@ https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arc
 https://developer.nvidia.com/cudnn  
 Copy the files inside the cudnn lib64 folder to the corresponding cuda folder ```/usr/local/cuda-9.0/lib64```. 
 Copy the files inside the cudnn include folder to the corresponding cuda folder ```/usr/local/cuda-9.0/include```. 
+
+
+
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+)
+Conda Python 3.7 - Pytorch (in env) <a name="Conda_Pytorch_venv"></a>
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+)
+======  
+NOTE: updated 25.10.2018
+
+* Get [miniconda](https://conda.io/miniconda.html#miniconda)
+* Make it executable (chmod +x [file])
+* Run file (no need to sudo) ./[file]) -> You can chose where to install and if attach the PATH of your bashrc file. This will make it availabe everywhere. 
+* I like ipython to do some tests:  
+```conda update conda```  
+```conda update ipython```
+* Create a [conda](https://conda.io/docs/user-guide/getting-started.html#managing-environments) environment (e.g: cpyt37 --conda pytorch with python37) with some desired packages (numpy matplotlib scipy ipython):  
+```conda create --name my_name_env```  
+**to activate:**   
+```source activate my_name_env```  
+**to deactivate:**  
+```source deactivate```
+* Install [pytorch](https://pytorch.org/get-started/locally/)
+```conda install pytorch torchvision -c pytorch```  
+* Consider configuring an ide like [pycharm](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html)
+
 
 
 
@@ -84,7 +111,7 @@ TensorFlow in a Virtual Environment <a name="TensorFlow_venv"></a>
 
 
 
-Get a Python-3 Virtual Environment <a name="python3_venv"></a>
+Python-3 Virtual Environment <a name="python3_venv"></a>
 ======
 
 ```sudo apt-get install python3-pip python3-dev python-virtualenv```  
