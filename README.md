@@ -57,7 +57,7 @@ NOTE: updated 25.10.2018
 ```source deactivate```
 * Install [pytorch](https://pytorch.org/get-started/locally/)
 ```conda install pytorch torchvision -c pytorch```  
-* Consider configuring an ide like [pycharm](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html)
+* Consider configuring an ide like PyCharm and [configure the environment](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html)
 
 
 
