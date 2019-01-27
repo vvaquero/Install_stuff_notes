@@ -45,7 +45,7 @@ NOTE: updated 25.10.2018
 
 * Get [miniconda](https://conda.io/miniconda.html#miniconda)
 * Make it executable (chmod +x [file])
-* Run file (no need to sudo) ./[file]) -> You can chose where to install and if attach the PATH of your bashrc file. This will make it availabe everywhere. 
+* Run file (no need to sudo) ./[file]) -> You can chose where to install conda. You may chose to attach the PATH to your bashrc file to make it availabe everywhere. 
 * I like ipython to do some tests:  
 ```conda update conda```  
 ```conda update ipython```
